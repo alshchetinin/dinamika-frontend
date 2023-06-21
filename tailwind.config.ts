@@ -5,6 +5,7 @@ export default <Partial<Config>>{
   theme: {
     container: {
       center: true,
+      padding: '1rem',
     },
     // colors: {
     //   blue: {
@@ -31,10 +32,9 @@ export default <Partial<Config>>{
       '3xl': '3.5rem',
       '4xl': '5rem',
     },
-    // fontFamily: {
-    //   sans: ['Akzidenz-Grotesk Pro', 'sans-serif'],
-    //   gothic: ['Engravers Gothic', 'sans-serif'],
-    // },
+    fontFamily: {
+      sans: ['Montserrat', 'sans-serif'],
+    },
   },
   plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
   content: [

@@ -1,5 +1,6 @@
 <template>
-  <main>
+  <AppHeader />
+  <main class="font-sans">
     <slot />
   </main>
   <ModalsContainer />

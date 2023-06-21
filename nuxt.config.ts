@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxtjs/strapi',
     '@nuxt/content',
     'tailwind-svg-icon',
+    '@nuxtjs/google-fonts',
   ],
   pinia: {
     autoImports: ['defineStore', ['defineStore', 'definePiniaStore']],
@@ -22,4 +23,9 @@ export default defineNuxtConfig({
     dirs: ['stores'],
   },
   css: ['vue-final-modal/style.css'],
+  googleFonts: {
+    families: {
+      Montserrat: [400, 500, 600, 700, 800, 900],
+    },
+  },
 })
