@@ -39,6 +39,7 @@
     "gsap": "^3.12.1",
     "maska": "^2.1.9",
     "pinia": "^2.1.4",
+    "split-type": "^0.3.3",
     "tailwind-svg-icon": "^1.0.2",
     "vue-final-modal": "^4.4.2"
   }
