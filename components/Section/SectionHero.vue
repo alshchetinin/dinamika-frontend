@@ -3,7 +3,7 @@
     <div class="container z-10">
       <h1
         ref="element"
-        class="text-lg lg:text-2xl font-semibold uppercase text-white mb-5"
+        class="text-base lg:text-2xl font-semibold uppercase text-white mb-5"
       >
         динамика – Команда, объединившая ведущих производителей
         кабелЬНО-ПРОВОДНИКОВОЙ, кабеленесущих систем и эстакад для реализации
@@ -15,7 +15,7 @@
       <nuxt-img
         src="/hero.jpg"
         alt="1"
-        class="h-full w-full object-cover object-left"
+        class="h-full w-full object-cover lg:object-left"
       />
     </div>
   </section>
