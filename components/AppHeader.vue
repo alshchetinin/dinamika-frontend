@@ -3,7 +3,7 @@
     class="text-white border-b border-b-white fixed top-0 z-10 w-full py-5 border-opacity-20"
   >
     <div class="flex container justify-between items-center">
-      <img
+      <nuxt-img
         src="/logo.png"
         alt="Логотип компании «Динамика»"
         class="max-w-[185px]"

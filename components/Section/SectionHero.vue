@@ -12,8 +12,8 @@
       <!-- <ui-button text="Получить консультацию" size="medium" variant="primary -->
     </div>
     <div class="absolute inset-0">
-      <img
-        src="hero.jpg"
+      <nuxt-img
+        src="/hero.jpg"
         alt="1"
         class="h-full w-full object-cover object-left"
       />

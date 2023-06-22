@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     'tailwind-svg-icon',
     '@nuxtjs/google-fonts',
+    '@nuxt/image',
   ],
   pinia: {
     autoImports: ['defineStore', ['defineStore', 'definePiniaStore']],
