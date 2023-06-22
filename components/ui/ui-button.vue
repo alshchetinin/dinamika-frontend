@@ -1,21 +1,20 @@
 <template>
-  <div ref="button">
-    <button
-      v-if="isButton"
-      :class="classButton"
-      class="leading-none gap-2 rounded-xl transition duration-200 ease-in-out uppercase flex items-center border disabled:cursor-not-allowed font-medium disabled:bg-opacity-30"
-    >
-      <span v-html="text"></span>
-    </button>
-    <NuxtLink
-      v-if="isLink"
-      :to="link"
-      :class="classButton"
-      class="leading-none gap-2 rounded-xl no-underline transition duration-200 ease-in-out uppercase inline-flex items-center border"
-    >
-      <span v-html="text"></span>
-    </NuxtLink>
-  </div>
+  <button
+    v-if="isButton"
+    :class="[classButton, attrs.class]"
+    class="leading-none text-center gap-2 rounded-md transition duration-200 ease-in-out uppercase flex items-center disabled:cursor-not-allowed font-medium disabled:bg-opacity-30"
+    @click="emit('click')"
+  >
+    <span class="text-center w-full" v-html="text"></span>
+  </button>
+  <NuxtLink
+    v-if="isLink"
+    :to="link"
+    :class="classButton"
+    class="leading-none gap-2 text-center rounded-md no-underline transition duration-200 ease-in-out uppercase inline-flex items-center border"
+  >
+    <span v-html="text"></span>
+  </NuxtLink>
 </template>
 
 <script setup lang="ts">
@@ -49,10 +48,12 @@ const props = defineProps({
   },
 })
 
+const emit = defineEmits(['click'])
+const attrs = useAttrs()
 const styleSize: sizes = {
   small: 'px-4 py-3 text-[12px]',
   medium: 'py-3 px-6 text-xs ',
-  large: 'px-8 py-4 text-lg',
+  large: 'px-8 py-4 text-sm',
 }
 
 const styleButton: variants = {

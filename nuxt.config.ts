@@ -14,6 +14,7 @@ export default defineNuxtConfig({
       language: 'ru', // prefer more explicit language codes like `en-AU` over `en`
     },
   },
+
   modules: [
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
@@ -25,9 +26,11 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxt/image',
   ],
+
   pinia: {
     autoImports: ['defineStore', ['defineStore', 'definePiniaStore']],
   },
+
   strapi: {
     url: process.env.STRAPI_URL || 'http://localhost:1337',
     prefix: '/api',
@@ -35,14 +38,21 @@ export default defineNuxtConfig({
     cookie: {},
     cookieName: 'strapi_jwt',
   },
+
   imports: {
     dirs: ['stores'],
   },
+
   css: ['vue-final-modal/style.css'],
   extends: ['nuxt-seo-kit'],
+
   googleFonts: {
     families: {
       Montserrat: [400, 500, 600, 700, 800, 900],
     },
+  },
+
+  build: {
+    transpile: ['vue-toastification'],
   },
 })

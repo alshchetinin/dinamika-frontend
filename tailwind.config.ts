@@ -7,20 +7,21 @@ export default <Partial<Config>>{
       center: true,
       padding: '1rem',
     },
-    // colors: {
-    //   blue: {
-    //     900: '#0a2341',
-    //   },
-    //   orange: {
-    //     100: '#EDE9E7',
-    //     200: '#e6d4c8',
-    //     700: '#c36446',
-    //     800: '#aa5532',
-    //     900: '#91432a',
-    //   },
-    //   gray: colors.gray,
-    //   white: colors.white,
-    // },
+    colors: {
+      primary: '#0B7076',
+      blue: {
+        900: '#0a2341',
+      },
+      orange: {
+        100: '#EDE9E7',
+        200: '#e6d4c8',
+        700: '#c36446',
+        800: '#aa5532',
+        900: '#91432a',
+      },
+      gray: colors.gray,
+      white: colors.white,
+    },
     fontSize: {
       '2xs': '0.625rem',
       xs: '0.75rem',
