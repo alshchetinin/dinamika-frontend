@@ -22,11 +22,21 @@
       />
     </div>
     <div class="absolute inset-0">
-      <nuxt-img
+      <!-- <nuxt-img
         src="/hero.jpg"
         alt="1"
         class="h-full w-full object-cover lg:object-left"
-      />
+      /> -->
+      <div class="absolute inset-0 bg-[#000] bg-opacity-80"></div>
+      <video
+        id="video-background"
+        class="h-full w-full object-cover"
+        autoplay
+        muted
+        loop
+      >
+        <source src="/hero.mp4" type="video/mp4" />
+      </video>
     </div>
   </section>
 </template>
