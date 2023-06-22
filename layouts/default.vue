@@ -1,4 +1,6 @@
 <template>
+  <SeoKit />
+  <OgImageStatic />
   <AppHeader />
   <main class="font-sans">
     <slot />

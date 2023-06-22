@@ -1,4 +1,19 @@
 export default defineNuxtConfig({
+  app: {
+    head: {
+      titleTemplate: '%pageTitle %titleSeparator %siteName',
+    },
+  },
+
+  runtimeConfig: {
+    public: {
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://72d.ru',
+      siteName: 'ДИНАМИКА',
+      siteDescription:
+        'Команда, объединившая ведущих производителей кабельно-проводниковой, кабеленесущих систем и эстакад для реализации сложных электротехнических проектов в нефтегазовой сфере',
+      language: 'ru', // prefer more explicit language codes like `en-AU` over `en`
+    },
+  },
   modules: [
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
@@ -24,6 +39,7 @@ export default defineNuxtConfig({
     dirs: ['stores'],
   },
   css: ['vue-final-modal/style.css'],
+  extends: ['nuxt-seo-kit'],
   googleFonts: {
     families: {
       Montserrat: [400, 500, 600, 700, 800, 900],
