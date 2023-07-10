@@ -10,7 +10,7 @@ export enum enumVariants {
   third = 'third',
 }
 
-export interface sizes {
+export interface Sizes {
   superSmall?: string
   custom?: string
   small: string
@@ -23,4 +23,16 @@ export enum enumSizes {
   small = 'small',
   medium = 'medium',
   large = 'large',
+}
+
+export interface headingSizes {
+  big: string
+  medium: string
+  small: string
+}
+
+export enum enumHeadingSizes {
+  big = 'big',
+  medium = 'medium',
+  small = 'small',
 }

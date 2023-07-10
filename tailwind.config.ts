@@ -8,7 +8,23 @@ export default <Partial<Config>>{
       padding: '1rem',
     },
     colors: {
-      primary: '#0B7076',
+      button: {
+        primary: '#0b7076',
+        secondary: '#509495',
+      },
+      background: {
+        gray: '#ffffff',
+        white: '#ffffff',
+        'dark gray': '#262626',
+      },
+      text: {
+        basic: '#404040',
+        description: '#727272',
+        little: '#7d7d7d',
+        white: '#ffffff',
+        brand: '#0b7076',
+      },
+      primary: '#0b7076',
       blue: {
         900: '#0a2341',
       },
@@ -23,15 +39,15 @@ export default <Partial<Config>>{
       white: colors.white,
     },
     fontSize: {
-      '2xs': '0.625rem',
       xs: '0.75rem',
-      sm: '1rem',
-      base: '1.3125rem',
-      lg: '1.5rem',
-      xl: '1.875rem',
-      '2xl': '2.5rem',
-      '3xl': '3.5rem',
-      '4xl': '5rem',
+      sm: '0.875rem',
+      base: '1rem',
+      lg: '1.125rem',
+      xl: '1.25rem',
+      '2xl': '1.5rem',
+      '3xl': '2.25rem',
+      '4xl': '3rem',
+      '5xl': '3.75rem',
     },
     fontFamily: {
       sans: ['Montserrat', 'sans-serif'],
