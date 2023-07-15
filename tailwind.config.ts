@@ -15,7 +15,7 @@ export default <Partial<Config>>{
       background: {
         gray: '#ffffff',
         white: '#ffffff',
-        'dark gray': '#262626',
+        'dark-gray': '#262626',
       },
       text: {
         basic: '#404040',

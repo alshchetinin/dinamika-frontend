@@ -1,4 +1,81 @@
 <template>
   <SectionContact />
   <TheMap />
+  <footer class="bg-background-dark-gray text-white py-16">
+    <div class="container">
+      <div class="grid lg:grid-cols-2 gap-5">
+        <div>
+          <div class="space-y-7">
+            <div>
+              <ui-subtitle class="text-white opacity-30 mb-2"
+                >Адрес</ui-subtitle
+              >
+              <ui-text class="text-white" as="p"
+                >Тюмень, Коммунистическая, 70 к3 ст16</ui-text
+              >
+            </div>
+            <div>
+              <ui-subtitle class="text-white opacity-30 mb-2"
+                >Время работы</ui-subtitle
+              >
+              <ui-text class="text-white" as="p">пн–пт: 08:30-17:30</ui-text>
+            </div>
+            <div>
+              <ui-subtitle class="text-white opacity-30 mb-2"
+                >Отдел продаж</ui-subtitle
+              >
+              <ui-text class="text-white" as="p">+7 (345) 258 84 88</ui-text>
+              <ui-text class="text-white" as="p">dinamika-72@mail.ru</ui-text>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-7">
+          <div>
+            <ui-subtitle class="text-white opacity-30 mb-2"
+              >О компании</ui-subtitle
+            >
+            <div class="grid gap-2">
+              <nuxt-link to="/about">
+                <ui-text class="text-white" as="p">О компании</ui-text>
+              </nuxt-link>
+              <nuxt-link to="/cases">
+                <ui-text class="text-white" as="p">Кейсы</ui-text>
+              </nuxt-link>
+              <nuxt-link to="/job">
+                <ui-text class="text-white" as="p">Карьера</ui-text>
+              </nuxt-link>
+              <nuxt-link to="/reviews">
+                <ui-text class="text-white" as="p">Отзывы</ui-text>
+              </nuxt-link>
+              <nuxt-link to="/contacts">
+                <ui-text class="text-white" as="p">Контакты</ui-text>
+              </nuxt-link>
+            </div>
+          </div>
+          <div class="max-w-xs">
+            <ui-subtitle class="text-white opacity-30 mb-2"
+              >Документы</ui-subtitle
+            >
+            <div class="grid gap-2">
+              <nuxt-link to="/policy">
+                <ui-text class="text-white opacity-40" as="p"
+                  >Политика обработки ПД</ui-text
+                >
+              </nuxt-link>
+              <nuxt-link to="/policy">
+                <ui-text class="text-white opacity-40" as="p"
+                  >Соглашение об обработке персональных данных</ui-text
+                >
+              </nuxt-link>
+              <nuxt-link to="/about">
+                <ui-text class="text-white opacity-40" as="p"
+                  >Реквизиты</ui-text
+                >
+              </nuxt-link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </template>
