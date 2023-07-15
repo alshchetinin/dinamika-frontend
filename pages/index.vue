@@ -2,5 +2,6 @@
   <SectionHero />
   <SectionAbout />
   <SectionAdvantages />
-  <SectionStrengths />
+  <AppForm class="z-30 bg-white relative" />
+  <SectionStrengths class="z-30 bg-white relative" />
 </template>

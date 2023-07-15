@@ -5,7 +5,7 @@
   <main class="font-sans">
     <slot />
   </main>
-  <AppFooter />
+  <AppFooter class="z-30 relative" />
   <ModalsContainer />
 </template>
 

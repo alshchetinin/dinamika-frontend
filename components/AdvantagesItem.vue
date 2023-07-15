@@ -1,7 +1,7 @@
 <template>
-  <section class="container">
+  <section class="card bg-white min-h-screen">
     <ui-block>
-      <div class="grid lg:grid-cols-5 gap-5">
+      <div class="grid lg:grid-cols-5 gap-5 container">
         <ui-subtitle> о нас</ui-subtitle>
 
         <div class="lg:col-span-4">

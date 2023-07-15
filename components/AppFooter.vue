@@ -1,7 +1,7 @@
 <template>
-  <SectionContact />
-  <TheMap />
-  <footer class="bg-background-dark-gray text-white py-16">
+  <SectionContact class="bg-white z-30 relative" />
+  <TheMap class="z-30 bg-white relative" />
+  <footer class="bg-background-dark-gray relative z-30 text-white py-16">
     <div class="container">
       <div class="grid lg:grid-cols-2 gap-5">
         <div>

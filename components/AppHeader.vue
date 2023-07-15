@@ -1,6 +1,6 @@
 <template>
   <header
-    class="text-white border-b border-b-white fixed top-0 z-10 w-full py-5 backdrop-blur-sm bg-text-basic bg-opacity-70 border-opacity-20"
+    class="text-white border-b border-b-white absolute top-0 z-10 w-full py-5 border-opacity-20"
   >
     <div class="flex container justify-between items-center">
       <nuxt-img

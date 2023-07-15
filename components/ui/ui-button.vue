@@ -58,10 +58,10 @@ const styleSize: sizes = {
 
 const styleButton: variants = {
   primary:
-    'bg-primary group hover:bg-primaryHover text-white hover:text-white ' +
+    'bg-primary group hover:bg-button-secondary text-white hover:text-white ' +
     styleSize[props.size],
   secondary:
-    'bg-transparent group hover:bg-primary text-primary hover:text-white border-primary hover:border-white ' +
+    'text-white  bg-button-secondary hover:text-white border-primary hover:border-white ' +
     styleSize[props.size],
   third:
     'bg-blue group hover:bg-white text-white hover:text-blue border-primary ' +
