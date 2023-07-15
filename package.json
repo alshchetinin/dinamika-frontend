@@ -45,6 +45,7 @@
     "split-type": "^0.3.3",
     "tailwind-svg-icon": "^1.0.2",
     "vue-final-modal": "^4.4.2",
-    "vue-toastification": "^2.0.0-rc.5"
+    "vue-toastification": "^2.0.0-rc.5",
+    "vue-yandex-maps": "^1.1.0"
   }
 }

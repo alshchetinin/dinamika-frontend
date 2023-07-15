@@ -55,4 +55,6 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vue-toastification'],
   },
+
+  plugins: ['~/plugins/vue-final-modal.ts', '~/plugins/maska.ts', '~/plugins/yandex-map.client.js', '~/plugins/vue-toastificaton.client.js'],
 })
