@@ -51,9 +51,9 @@ const props = defineProps({
 const emit = defineEmits(['click'])
 const attrs = useAttrs()
 const styleSize: sizes = {
-  small: 'px-4 py-3 text-[12px]',
-  medium: 'py-3 px-6 text-xs ',
-  large: 'px-8 py-4 text-sm',
+  small: 'px-4 py-3 text-[12px] max-h-14',
+  medium: 'py-3 px-6 text-xs max-h-14 ',
+  large: 'px-8 py-4 text-sm max-h-14',
 }
 
 const styleButton: variants = {

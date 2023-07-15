@@ -1,5 +1,8 @@
 <template>
-  <section class="card bg-white min-h-screen">
+  <section
+    class="card bg-white min-h-screen"
+    style="box-shadow: 0px -36px 104px 0px rgba(0, 0, 0, 0.1)"
+  >
     <ui-block>
       <div class="grid lg:grid-cols-5 gap-5 container">
         <ui-subtitle> о нас</ui-subtitle>

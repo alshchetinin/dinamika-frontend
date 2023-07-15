@@ -21,7 +21,7 @@ onMounted(() => {
         invalidateOnRefresh: true,
       },
       ease: 'none',
-      scale: () => 1 - (cards.length - index) * 0.025,
+      // scale: () => 1 - (cards.length - index) * 0.025,
     })
 
     ScrollTrigger.create({
