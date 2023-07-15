@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="container container-streng-animation">
     <ui-block>
       <div class="grid lg:grid-cols-5 gap-5 mb-20">
         <ui-subtitle>сильные стороны</ui-subtitle>
@@ -9,7 +9,7 @@
         </div>
       </div>
       <div class="grid lg:grid-cols-4 gap-5">
-        <div class="p-2">
+        <div class="p-2 streng-animation">
           <p class="text-[57px] font-medium leading-none mb-3">01</p>
           <ui-title as="h3" size="small" class="mb-5">Цельность</ui-title>
           <ui-text as="p" small>
@@ -21,14 +21,14 @@
             переговорах. 
           </ui-text>
         </div>
-        <div>
+        <div class="streng-animation">
           <nuxt-img
             src="/hero.jpg"
             alt="1"
             class="h-full w-full object-cover rounded-lg"
           />
         </div>
-        <div class="p-2">
+        <div class="p-2 streng-animation">
           <p class="text-[57px] font-medium leading-none mb-3">02</p>
           <ui-title as="h3" size="small" class="mb-5">Надежность</ui-title>
           <ui-text as="p" small>
@@ -41,21 +41,21 @@
             перед заказчиками.
           </ui-text>
         </div>
-        <div>
+        <div class="streng-animation">
           <nuxt-img
             src="/hero.jpg"
             alt="1"
             class="h-full w-full object-cover rounded-lg"
           />
         </div>
-        <div>
+        <div class="streng-animation">
           <nuxt-img
             src="/hero.jpg"
             alt="1"
             class="h-full w-full object-cover rounded-lg"
           />
         </div>
-        <div class="p-2">
+        <div class="p-2 streng-animation">
           <p class="text-[57px] font-medium leading-none mb-3">03</p>
           <ui-title as="h3" size="small" class="mb-5">Прозрачность</ui-title>
           <ui-text as="p" small>
@@ -68,14 +68,14 @@
             инженеры проекта и специалисты закупа подрядчика. 
           </ui-text>
         </div>
-        <div>
+        <div class="streng-animation">
           <nuxt-img
             src="/hero.jpg"
             alt="1"
             class="h-full w-full object-cover rounded-lg"
           />
         </div>
-        <div class="p-2">
+        <div class="p-2 streng-animation">
           <p class="text-[57px] font-medium leading-none mb-3">04</p>
           <ui-title as="h3" size="small" class="mb-5">Оптимизация</ui-title>
           <ui-text as="p" small>
@@ -92,3 +92,29 @@
     </ui-block>
   </section>
 </template>
+
+<script setup lang="ts">
+import { animate, stagger, spring, inView } from 'motion'
+
+onMounted(() => {
+  const anmationArray = document.querySelectorAll('.streng-animation')
+  inView(
+    '.container-streng-animation',
+    (info) => {
+      animate(
+        anmationArray,
+        {
+          opacity: [0, 1],
+          x: ['-100%', 0],
+        },
+        {
+          // easing: spring(),
+          duration: 1.5,
+          delay: stagger(0.05),
+        }
+      )
+    },
+    { margin: '0px 500px 0px 0px' }
+  )
+})
+</script>
