@@ -4,11 +4,8 @@
       <h1
         ref="element"
         class="animation-title text-base lg:text-3xl font-semibold uppercase mb-5"
-      >
-        динамика – Команда, объединившая ведущих производителей
-        кабелЬНО-ПРОВОДНИКОВОЙ продукции, кабеленесущих систем и эстакад для
-        реализации сложных электротехнических проектов в нефтегазовой сфере
-      </h1>
+        v-html="title"
+      ></h1>
       <div ref="button">
         <ui-button
           text="Оставить заявку"
@@ -19,21 +16,23 @@
       </div>
     </div>
     <div class="absolute inset-0">
-      <!-- <nuxt-img
-        src="/hero.jpg"
-        alt="1"
-        class="h-full w-full object-cover lg:object-left"
-      /> -->
       <div class="absolute inset-0 bg-[#000] bg-opacity-80"></div>
       <video
+        v-if="video"
         id="video-background"
         class="h-full w-full object-cover"
         autoplay
         muted
         loop
       >
-        <source src="/hero.mp4" type="video/mp4" />
+        <source :src="video" type="video/mp4" />
       </video>
+      <nuxt-img
+        v-else
+        :src="image"
+        alt="1"
+        class="h-full w-full object-cover lg:object-left"
+      />
     </div>
   </section>
 </template>
@@ -44,6 +43,21 @@ import { animate, stagger, spring } from 'motion'
 import { useModal } from 'vue-final-modal'
 import ModalForm from '../Modal/ModalForm.vue'
 
+defineProps({
+  title: {
+    type: String,
+    default:
+      'динамика – Команда, объединившая ведущих производителей кабелЬНО-ПРОВОДНИКОВОЙ продукции, кабеленесущих систем и эстакад для реализации сложных электротехнических проектов в нефтегазовой сфере',
+  },
+  image: {
+    type: String,
+    default: '',
+  },
+  video: {
+    type: String,
+    default: '/hero.mp4',
+  },
+})
 const { open, close } = useModal({
   component: ModalForm,
   attrs: {
