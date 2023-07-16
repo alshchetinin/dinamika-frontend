@@ -25,6 +25,7 @@ export default defineNuxtConfig({
     'tailwind-svg-icon',
     '@nuxtjs/google-fonts',
     '@nuxt/image',
+    'nuxt-swiper',
   ],
 
   pinia: {

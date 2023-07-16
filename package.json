@@ -41,6 +41,7 @@
     "gsap": "^3.12.1",
     "maska": "^2.1.9",
     "motion": "^10.16.2",
+    "nuxt-swiper": "^1.2.0",
     "pinia": "^2.1.4",
     "split-type": "^0.3.3",
     "tailwind-svg-icon": "^1.0.2",

@@ -28,3 +28,13 @@ select[multiple],
 textarea {
   @apply block w-full rounded-md bg-white border-gray-300  focus:border-gray-500 focus:bg-white focus:ring-0;
 }
+
+
+.thumbs-swiper .swiper-slide {
+  opacity: 0.4;
+  transition: opacity 0.2s ease-in-out;
+}
+.thumbs-swiper .swiper-slide-thumb-active {
+  opacity: 1;
+  @apply text-primary font-semibold  border-primary;  
+}
