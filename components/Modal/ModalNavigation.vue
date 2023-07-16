@@ -19,27 +19,27 @@
             >
           </li>
           <li>
-            <nuxt-link class="hover:opacity-70 transition-all" to="#direction"
+            <nuxt-link class="hover:opacity-70 transition-all" to="/about"
               >О компании</nuxt-link
             >
           </li>
           <li>
-            <nuxt-link class="hover:opacity-70 transition-all" to="#direction"
+            <nuxt-link class="hover:opacity-70 transition-all" to="/cases"
               >Кейсы</nuxt-link
             >
           </li>
           <li>
-            <nuxt-link class="hover:opacity-70 transition-all" to="#direction"
+            <nuxt-link class="hover:opacity-70 transition-all" to="/job"
               >Карьера</nuxt-link
             >
           </li>
           <li>
-            <nuxt-link class="hover:opacity-70 transition-all" to="#direction"
+            <nuxt-link class="hover:opacity-70 transition-all" to="/reviews"
               >Отзывы</nuxt-link
             >
           </li>
           <li>
-            <nuxt-link class="hover:opacity-70 transition-all" to="#direction"
+            <nuxt-link class="hover:opacity-70 transition-all" to="/contacts"
               >Контакты</nuxt-link
             >
           </li>

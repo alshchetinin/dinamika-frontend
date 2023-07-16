@@ -8,7 +8,7 @@
       ></h1>
       <div ref="button">
         <ui-button
-          text="Оставить заявку"
+          text="Связаться с нами"
           size="large"
           variant="primary"
           @click="open"
