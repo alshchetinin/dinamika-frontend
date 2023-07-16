@@ -8,11 +8,67 @@
         alt="Логотип компании «Динамика»"
         class="max-w-[185px]"
       />
-      <div>
+      <div class="flex gap-5 py-2">
+        <nav
+          class="border-r border-white px-5 border-opacity-20 hidden lg:block"
+        >
+          <ul class="flex gap-6">
+            <li>
+              <nuxt-link class="hover:opacity-70 transition-all" to="#direction"
+                >Направления</nuxt-link
+              >
+            </li>
+            <li>
+              <nuxt-link class="hover:opacity-70 transition-all" to="#direction"
+                >О компании</nuxt-link
+              >
+            </li>
+            <li>
+              <nuxt-link class="hover:opacity-70 transition-all" to="#direction"
+                >Кейсы</nuxt-link
+              >
+            </li>
+            <li>
+              <nuxt-link class="hover:opacity-70 transition-all" to="#direction"
+                >Карьера</nuxt-link
+              >
+            </li>
+            <li>
+              <nuxt-link class="hover:opacity-70 transition-all" to="#direction"
+                >Отзывы</nuxt-link
+              >
+            </li>
+            <li>
+              <nuxt-link class="hover:opacity-70 transition-all" to="#direction"
+                >Контакты</nuxt-link
+              >
+            </li>
+          </ul>
+        </nav>
         <a href="tel:+7 (345) 258 84 88" class="font-semibold"
           >+7 (345) 258 84 88</a
         >
+        <button
+          class="border-l border-white px-5 border-opacity-20 lg:hidden"
+          @click="open"
+        >
+          <tailwind-svg-icon name="burger" class="text-white text-2xl" />
+        </button>
       </div>
     </div>
   </header>
 </template>
+
+<script setup lang="ts">
+import { useModal } from 'vue-final-modal'
+import ModalNavigation from '~/components/Modal/ModalNavigation.vue'
+
+const { open, close } = useModal({
+  component: ModalNavigation,
+  attrs: {
+    onClose() {
+      close()
+    },
+  },
+})
+</script>

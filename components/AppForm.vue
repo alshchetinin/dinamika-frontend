@@ -1,7 +1,7 @@
 <template>
   <section style="box-shadow: 0px -36px 104px 0px rgba(0, 0, 0, 0.1)">
-    <ui-block>
-      <div class="container bg-primary text-white p-5 rounded-lg lg:p-20">
+    <ui-block class="container">
+      <div class="bg-primary text-white p-5 rounded-lg lg:p-20">
         <ui-title as="h2" size="big" class="mb-6 lg:mb-10">
           Получите консультацию по вашему проекту
         </ui-title>

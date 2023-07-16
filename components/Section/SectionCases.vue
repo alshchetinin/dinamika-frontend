@@ -10,7 +10,7 @@
             компаний
           </ui-title>
         </div>
-        <div class="col-span-full">
+        <div class="col-span-full hidden lg:block">
           <CasesSwiper />
         </div>
       </div>
