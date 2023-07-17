@@ -54,8 +54,26 @@ export default defineNuxtConfig({
   },
 
   build: {
-    transpile: ['vue-toastification'],
+    transpile:
+      process.env.NODE_ENV === 'production'
+        ? [
+            'naive-ui',
+            'vueuc',
+            '@css-render/vue3-ssr',
+            '@juggle/resize-observer',
+            'vue-toastification',
+          ]
+        : ['@juggle/resize-observer', 'vue-toastification'],
   },
 
-  plugins: ['~/plugins/vue-final-modal.ts', '~/plugins/maska.ts', '~/plugins/yandex-map.client.js', '~/plugins/vue-toastificaton.client.js'],
+  vite: {
+    optimizeDeps: {
+      include:
+        process.env.NODE_ENV === 'development'
+          ? ['naive-ui', 'vueuc', 'date-fns-tz/esm/formatInTimeZone']
+          : [],
+    },
+  },
+
+  plugins: ['~/plugins/vue-toastificaton.client.js', '~/plugins/yandex-map.client.js', '~/plugins/naive-ui.ts', '~/plugins/vue-final-modal.ts', '~/plugins/maska.ts'],
 })
