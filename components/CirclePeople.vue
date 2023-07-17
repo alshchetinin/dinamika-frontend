@@ -6,7 +6,7 @@ defineProps({
   },
   img: {
     type: String,
-    default: '',
+    default: 'team/2.png',
   },
 })
 </script>
@@ -18,5 +18,11 @@ defineProps({
       width: width + 'px',
       height: width + 'px',
     }"
-  ></div>
+  >
+    <nuxt-img
+      :src="img"
+      alt="команда «Динамика»"
+      class="w-full h-full object-cover rounded-full"
+    />
+  </div>
 </template>

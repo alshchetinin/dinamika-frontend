@@ -1,14 +1,50 @@
 <template>
   <div class="w-full h-full relative circle_people_container">
-    <CirclePeople width="132" class="circle_people top-8 -left-4" />
-    <CirclePeople width="108" class="circle_people top-16 left-[19vw]" />
-    <CirclePeople width="118" class="circle_people top-[15vw] left-[10vw]" />
-    <CirclePeople width="100" class="circle_people top-[7vw] left-[50vw]" />
-    <CirclePeople width="160" class="circle_people bottom-[4vw] left-[25vw]" />
-    <CirclePeople width="160" class="circle_people top-8 -right-4" />
-    <CirclePeople width="108" class="circle_people top-16 right-[19vw]" />
-    <CirclePeople width="90" class="circle_people top-[15vw] right-[10vw]" />
-    <CirclePeople width="120" class="circle_people bottom-[7vw] right-[25vw]" />
+    <CirclePeople
+      width="132"
+      class="circle_people top-8 -left-4"
+      img="team/1.png"
+    />
+    <CirclePeople
+      width="108"
+      class="circle_people top-16 left-[19vw]"
+      img="team/2.png"
+    />
+    <CirclePeople
+      width="118"
+      class="circle_people top-[15vw] left-[10vw]"
+      img="team/3.png"
+    />
+    <CirclePeople
+      width="100"
+      class="circle_people top-[7vw] left-[50vw]"
+      img="team/4.png"
+    />
+    <CirclePeople
+      width="160"
+      class="circle_people bottom-[4vw] left-[25vw]"
+      img="team/8.png"
+    />
+    <CirclePeople
+      width="160"
+      class="circle_people top-8 -right-4"
+      img="team/6.png"
+    />
+    <CirclePeople
+      width="108"
+      class="circle_people top-16 right-[19vw]"
+      img="team/7.png"
+    />
+    <CirclePeople
+      width="90"
+      class="circle_people top-[15vw] right-[10vw]"
+      img="team/5.png"
+    />
+    <CirclePeople
+      width="120"
+      class="circle_people bottom-[7vw] right-[25vw]"
+      img="team/9.png"
+    />
   </div>
 </template>
 

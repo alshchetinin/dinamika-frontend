@@ -1,11 +1,16 @@
 <template>
-  <AdvantagesItem v-for="item in 4" :key="item" />
+  <AdvantagesItem
+    v-for="item in advantages.data"
+    :key="item.id"
+    :block="item.attributes"
+  />
 </template>
 
 <script setup>
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
+const { getAdvantage } = useData()
+const { data: advantages } = await getAdvantage()
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger)
   const cards = gsap.utils.toArray('.card')

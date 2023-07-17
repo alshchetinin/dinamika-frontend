@@ -1,3 +1,17 @@
+<script setup lang="ts">
+import ModalForm from '@/components/Modal/ModalForm.vue'
+import { useModal } from 'vue-final-modal'
+
+const { open, close } = useModal({
+  component: ModalForm,
+  attrs: {
+    onClose() {
+      close()
+    },
+  },
+})
+</script>
+
 <template>
   <section class="container">
     <ui-block>
@@ -14,6 +28,7 @@
                 text="Оставить заявку"
                 size="large"
                 variant="primary"
+                @click="open"
               />
             </div>
             <div class="space-y-7">
