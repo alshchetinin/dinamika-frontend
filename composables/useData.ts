@@ -53,5 +53,38 @@ export default function useData() {
     )
   }
 
-  return { getAdvantage, getStrength, getContact, getVacancie, getReviews }
+  const getCases = () => {
+    return useAsyncData(
+      'cases',
+      async () =>
+        await find('cases', {
+          populate: ['deep'],
+        })
+    )
+  }
+
+  const getMainCase = () => {
+    return useAsyncData(
+      'mainCase',
+      async () =>
+        await find('cases', {
+          populate: ['deep'],
+          filters: {
+            isMain: {
+              $eq: true,
+            },
+          },
+        })
+    )
+  }
+
+  return {
+    getAdvantage,
+    getStrength,
+    getContact,
+    getVacancie,
+    getReviews,
+    getCases,
+    getMainCase,
+  }
 }

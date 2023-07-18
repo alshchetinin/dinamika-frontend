@@ -12,9 +12,13 @@
       }"
       @swiper="setThumbsSwiper"
     >
-      <SwiperSlide v-for="item in cases" :key="item.id" class="cursor-pointer">
+      <SwiperSlide
+        v-for="item in cases?.data"
+        :key="item.id"
+        class="cursor-pointer"
+      >
         <p class="pb-5 border-b text-sm text-center">
-          {{ item.title }}
+          {{ item.attributes.title }}
         </p>
       </SwiperSlide>
     </Swiper>
@@ -26,42 +30,25 @@
       :thumbs="{ swiper: thumbsSwiper }"
       @swiper="setSwiper"
     >
-      <SwiperSlide v-for="item in cases" :key="item.id" class="p-2">
-        <CaseItem />
+      <SwiperSlide v-for="item in cases?.data" :key="item.id" class="p-2">
+        <CaseItem :data="item.attributes" />
       </SwiperSlide>
     </Swiper>
   </div>
   <div class="lg:hidden grid gap-10">
-    <CaseItem v-for="item in cases" :key="item.id" />
+    <CaseItem
+      v-for="item in cases?.data"
+      :key="item.id"
+      :data="item.attributes"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
-const cases = [
-  {
-    id: 1,
-    title: 'Антипинский НПЗ',
-  },
-  {
-    id: 2,
-    title: 'ЖК Европейский',
-  },
-  {
-    id: 3,
-    title: 'ЖК Октябрьский',
-  },
-  {
-    id: 4,
-    title: 'Улица Дзержинского',
-  },
-  {
-    id: 5,
-    title: 'Каюмовское месторождение',
-  },
-]
+const { getMainCase } = useData()
+const { data: cases } = await getMainCase()
 const mainSwiper = ref(null)
 const thumbsSwiper = ref(null)
-
 const setSwiper = (swiper: any) => {
   mainSwiper.value = swiper
 }
