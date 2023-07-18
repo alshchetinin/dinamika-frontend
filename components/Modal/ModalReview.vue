@@ -10,7 +10,11 @@
     >
       <TailwindSvgIcon name="close" class="text-button-primary text-lg" />
     </button>
-    <nuxt-img :src="image" provider="strapi" />
+    <nuxt-img
+      :src="image"
+      provider="strapi"
+      class="max-h-screen w-auto object-contain p-20"
+    />
   </VueFinalModal>
 </template>
 
