@@ -47,8 +47,10 @@
             </li>
           </ul>
         </nav>
-        <a href="tel:+7 (345) 258 84 88" class="font-semibold"
-          >+7 (345) 258 84 88</a
+        <a
+          :href="`tel:${contact?.data.attributes.phone}`"
+          class="font-semibold"
+          >{{ contact?.data.attributes.phone }}</a
         >
         <button
           class="border-l border-white px-5 border-opacity-20 lg:hidden"
@@ -64,7 +66,8 @@
 <script setup lang="ts">
 import { useModal } from 'vue-final-modal'
 import ModalNavigation from '~/components/Modal/ModalNavigation.vue'
-
+const { getContact } = useData()
+const { data: contact } = await getContact()
 const { open, close } = useModal({
   component: ModalNavigation,
   attrs: {

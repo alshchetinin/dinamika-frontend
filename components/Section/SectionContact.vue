@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import ModalForm from '@/components/Modal/ModalForm.vue'
 import { useModal } from 'vue-final-modal'
-
+const { getContact } = useData()
+const { data: contact } = await getContact()
 const { open, close } = useModal({
   component: ModalForm,
   attrs: {
@@ -34,20 +35,22 @@ const { open, close } = useModal({
             <div class="space-y-7">
               <div>
                 <ui-subtitle class="text-primary mb-2">Адрес</ui-subtitle>
-                <ui-text as="p">Тюмень, Коммунистическая, 70 к3 ст16</ui-text>
+                <ui-text as="p">{{ contact?.data.attributes.address }}</ui-text>
               </div>
               <div>
                 <ui-subtitle class="text-primary mb-2"
                   >Время работы</ui-subtitle
                 >
-                <ui-text as="p">пн–пт: 08:30-17:30</ui-text>
+                <ui-text as="p"
+                  ><span v-html="contact?.data.attributes.workingHours"></span
+                ></ui-text>
               </div>
               <div>
                 <ui-subtitle class="text-primary mb-2"
                   >Отдел продаж</ui-subtitle
                 >
-                <ui-text as="p">+7 (345) 258 84 88</ui-text>
-                <ui-text as="p">dinamika-72@mail.ru</ui-text>
+                <ui-text as="p">{{ contact?.data.attributes.phone }}</ui-text>
+                <ui-text as="p">{{ contact?.data.attributes.email }}</ui-text>
               </div>
             </div>
           </div>

@@ -10,22 +10,28 @@
               <ui-subtitle class="text-white opacity-30 mb-2"
                 >Адрес</ui-subtitle
               >
-              <ui-text class="text-white" as="p"
-                >Тюмень, Коммунистическая, 70 к3 ст16</ui-text
-              >
+              <ui-text class="text-white" as="p">{{
+                contact?.data.attributes.address
+              }}</ui-text>
             </div>
             <div>
               <ui-subtitle class="text-white opacity-30 mb-2"
                 >Время работы</ui-subtitle
               >
-              <ui-text class="text-white" as="p">пн–пт: 08:30-17:30</ui-text>
+              <ui-text class="text-white" as="p"
+                ><span v-html="contact?.data.attributes.workingHours"></span
+              ></ui-text>
             </div>
             <div>
               <ui-subtitle class="text-white opacity-30 mb-2"
                 >Отдел продаж</ui-subtitle
               >
-              <ui-text class="text-white" as="p">+7 (345) 258 84 88</ui-text>
-              <ui-text class="text-white" as="p">dinamika-72@mail.ru</ui-text>
+              <ui-text class="text-white" as="p">{{
+                contact?.data.attributes.phone
+              }}</ui-text>
+              <ui-text class="text-white" as="p">{{
+                contact?.data.attributes.email
+              }}</ui-text>
             </div>
           </div>
         </div>
@@ -79,3 +85,8 @@
     </div>
   </footer>
 </template>
+
+<script setup>
+const { getContact } = useData()
+const { data: contact } = await getContact()
+</script>

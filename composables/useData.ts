@@ -1,5 +1,5 @@
 export default function useData() {
-  const { find } = useStrapi()
+  const { find, findOne } = useStrapi()
 
   const getAdvantage = () => {
     return useAsyncData(async () => {
@@ -9,6 +9,30 @@ export default function useData() {
       return data
     })
   }
+  const getStrength = () => {
+    return useAsyncData(
+      'strength',
+      async () =>
+        await findOne('strength', {
+          populate: ['deep'],
+        }),
+      {
+        transform: (data) => {
+          return data.data.attributes?.strengths
+        },
+      }
+    )
+  }
 
-  return { getAdvantage }
+  const getContact = () => {
+    return useAsyncData(
+      'contact',
+      async () =>
+        await findOne('contact', {
+          populate: ['deep'],
+        })
+    )
+  }
+
+  return { getAdvantage, getStrength, getContact }
 }
