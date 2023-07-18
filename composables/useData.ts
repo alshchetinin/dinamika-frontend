@@ -42,5 +42,16 @@ export default function useData() {
         })
     )
   }
-  return { getAdvantage, getStrength, getContact, getVacancie }
+
+  const getReviews = () => {
+    return useAsyncData(
+      'reviews',
+      async () =>
+        await find('reviews', {
+          populate: ['deep'],
+        })
+    )
+  }
+
+  return { getAdvantage, getStrength, getContact, getVacancie, getReviews }
 }

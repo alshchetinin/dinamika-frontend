@@ -4,6 +4,8 @@
     video=""
     image="reviews.jpg"
   />
+  <SectionAbout :show-video="false" />
+  <SectionReviews />
 </template>
 <script setup lang="ts">
 useSeoMeta({
