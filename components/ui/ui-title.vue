@@ -23,7 +23,7 @@ defineProps({
   },
 })
 const sizes: headingSizes = {
-  big: 'text-2xl lg:text-3xl font-medium uppercase  leading-tight',
+  big: 'text-2xl lg:text-[28px] font-medium uppercase  leading-tight',
   medium: 'text-base lg:text-[28px] leading-tight font-medium uppercase',
   small: 'text-sm lg:text-2xl uppercase leading-tight font-medium',
 }
