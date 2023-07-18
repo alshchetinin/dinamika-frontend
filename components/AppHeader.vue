@@ -49,7 +49,7 @@
         </nav>
         <a
           :href="`tel:${contact?.data.attributes.phone}`"
-          class="font-semibold"
+          class="font-semibold hidden lg:block"
           >{{ contact?.data.attributes.phone }}</a
         >
         <button

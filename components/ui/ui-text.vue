@@ -1,7 +1,7 @@
 <template>
   <component
     :is="as"
-    class="text-text-basic opacity-80"
+    class="opacity-80"
     :class="small ? 'text-xs' : 'text-base'"
     ><slot
   /></component>

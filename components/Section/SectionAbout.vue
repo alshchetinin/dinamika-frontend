@@ -1,3 +1,12 @@
+<script setup>
+defineProps({
+  showVideo: {
+    type: Boolean,
+    default: true,
+  },
+})
+</script>
+
 <template>
   <section class="container">
     <ui-block>
@@ -26,6 +35,7 @@
     </ui-block>
   </section>
   <video
+    v-if="showVideo"
     id="video-background"
     class="h-[500px] w-full object-cover"
     autoplay

@@ -1,5 +1,9 @@
 <template>
-  <SectionHero title="Каждый клиент <br/>наша гордость" />
+  <SectionHero
+    title="Каждый клиент <br/>наша гордость"
+    video=""
+    image="reviews.jpg"
+  />
 </template>
 <script setup lang="ts">
 useSeoMeta({

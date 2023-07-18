@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="absolute inset-0">
-      <div class="absolute inset-0 bg-[#000] bg-opacity-80"></div>
+      <div class="absolute inset-0 bg-[#000] bg-opacity-70"></div>
       <video
         v-if="video"
         id="video-background"
@@ -31,7 +31,7 @@
         v-else
         :src="image"
         alt="1"
-        class="h-full w-full object-cover lg:object-left"
+        class="h-full w-full object-cover lg:object-center"
       />
     </div>
   </section>

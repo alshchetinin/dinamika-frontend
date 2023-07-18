@@ -33,6 +33,14 @@ export default function useData() {
         })
     )
   }
-
-  return { getAdvantage, getStrength, getContact }
+  const getVacancie = () => {
+    return useAsyncData(
+      'vacancie',
+      async () =>
+        await find('vacancies', {
+          populate: ['deep'],
+        })
+    )
+  }
+  return { getAdvantage, getStrength, getContact, getVacancie }
 }

@@ -1,5 +1,12 @@
 <template>
-  <SectionHero title="Наша история началась <br/>с 2009 года" />
+  <SectionHero
+    title="Наша история началась <br/>с 2009 года"
+    image="about.jpeg"
+    video=""
+  />
+  <SectionAboutCEO />
+  <SectionAboutCareer />
+  <SectionAboutTeam />
 </template>
 
 <script setup lang="ts">
