@@ -78,6 +78,17 @@ export default function useData() {
     )
   }
 
+  const getTeam = () => {
+    return useAsyncData(
+      'team',
+      async () =>
+        await find('teams', {
+          populate: ['deep'],
+          sort: 'id:asc',
+        })
+    )
+  }
+
   return {
     getAdvantage,
     getStrength,
@@ -86,5 +97,6 @@ export default function useData() {
     getReviews,
     getCases,
     getMainCase,
+    getTeam,
   }
 }

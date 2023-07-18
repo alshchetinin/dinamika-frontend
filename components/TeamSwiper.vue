@@ -1,3 +1,9 @@
+<script setup>
+const { getTeam } = useData()
+const { data: team } = await getTeam()
+console.log(team.value)
+</script>
+
 <template>
   <div class="grid lg:grid-cols-5 gap-5 mt-10">
     <div class="gap-2 hidden lg:flex">
@@ -42,14 +48,19 @@
             },
           }"
         >
-          <SwiperSlide v-for="item in 10" :key="item">
-            <TeamItem />
+          <SwiperSlide v-for="item in team.data" :key="item.id">
+            <TeamItem :data="item.attributes" />
           </SwiperSlide>
         </Swiper>
       </div>
       <div class="overflow-x-scroll overflow-hidden w-full lg:hidden">
         <div class="flex items-center gap-5">
-          <TeamItem v-for="item in 10" :key="item" class="flex-shrink-0" />
+          <TeamItem
+            v-for="item in team.data"
+            :key="item.id"
+            :data="item.attributes"
+            class="flex-shrink-0"
+          />
         </div>
       </div>
     </div>
