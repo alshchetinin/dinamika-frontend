@@ -1,6 +1,6 @@
 <template>
   <SeoKit />
-  <OgImageStatic />
+  <OgImageScreenshot />
   <AppHeader />
   <main class="font-sans">
     <slot />
