@@ -13,7 +13,7 @@ defineProps({
       v-if="data?.photo?.data?.attributes?.url"
       :src="data?.photo?.data?.attributes?.url"
       provider="strapi"
-      class="h-96 w-full object-cover object-top rounded-md mb-4"
+      class="h-96 lg:w-full object-cover object-top rounded-md mb-4"
     />
     <div>
       <h3 class="mb-2 text-lg">{{ data.name }}</h3>
