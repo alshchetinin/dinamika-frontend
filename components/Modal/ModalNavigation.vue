@@ -56,4 +56,12 @@
 import { VueFinalModal } from 'vue-final-modal'
 
 const emit = defineEmits(['close'])
+const route = useRoute()
+
+watch(
+  () => route.path,
+  () => {
+    emit('close')
+  }
+)
 </script>
