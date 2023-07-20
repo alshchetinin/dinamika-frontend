@@ -13,7 +13,7 @@
 
 <script setup>
 useSeoMeta({
-  title: 'Политика конфиденциальности',
+  title: 'Соглашение об обработке персональных данных',
 })
 useHead({
   bodyAttrs: {
@@ -22,9 +22,11 @@ useHead({
 })
 
 const { findOne } = useStrapi()
-const { data, pending, error, refresh } = await useAsyncData('policy', () =>
-  findOne('policy', {
-    populate: 'deep',
-  })
+const { data, pending, error, refresh } = await useAsyncData(
+  'personalnye-dannye',
+  () =>
+    findOne('personalnye-dannye', {
+      populate: 'deep',
+    })
 )
 </script>

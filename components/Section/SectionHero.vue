@@ -57,6 +57,14 @@ defineProps({
     type: String,
     default: '/hero.mp4',
   },
+  height: {
+    type: String,
+    default: 'min-h-screen',
+  },
+  withButton: {
+    type: Boolean,
+    default: true,
+  },
 })
 const { open, close } = useModal({
   component: ModalForm,

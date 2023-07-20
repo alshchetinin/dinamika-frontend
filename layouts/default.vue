@@ -1,4 +1,5 @@
 <template>
+  <NuxtLoadingIndicator />
   <SeoKit />
   <OgImageScreenshot />
   <AppHeader />

@@ -19,7 +19,7 @@ defineProps({
   },
   customColor: {
     type: String,
-    default: 'dark:text-white text-B',
+    default: '',
   },
 })
 const sizes: headingSizes = {

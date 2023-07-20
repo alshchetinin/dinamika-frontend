@@ -20,6 +20,10 @@ nav .router-link-active::before {
   @apply w-2 h-2 rounded-full bg-primary -bottom-4 left-[calc(50%-0.25rem)];
 }
 
+.dark header {
+  @apply bg-gray-900;
+}
+
 .swiper-button-disabled {
   opacity: 0.2;
   cursor: auto;

@@ -68,7 +68,7 @@
                   >Политика обработки ПД</ui-text
                 >
               </nuxt-link>
-              <nuxt-link to="/policy">
+              <nuxt-link to="/personal-data">
                 <ui-text class="text-white opacity-40" as="p"
                   >Соглашение об обработке персональных данных</ui-text
                 >
