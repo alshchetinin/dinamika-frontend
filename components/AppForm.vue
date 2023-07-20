@@ -58,10 +58,11 @@ const toast = useToast()
 const rules = {
   name: { required },
   phone: { required },
+  email: { required },
 }
 
 const { sendTelegram } = useTickets()
-const v$ = useVuelidate(rules, { name, phone })
+const v$ = useVuelidate(rules, { name, phone, email })
 const { utmParams } = useUtm()
 const sendForm = async () => {
   if (!v$.value.$invalid) {
@@ -69,6 +70,8 @@ const sendForm = async () => {
     name.value = ''
     phone.value = ''
     toast.success('Заявка успешно отправлена')
+  } else {
+    toast.error('Заполните все поля')
   }
 }
 </script>

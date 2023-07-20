@@ -116,6 +116,8 @@ const sendForm = async () => {
     phone.value = ''
     emit('close')
     toast.success('Заявка успешно отправлена')
+  } else {
+    toast.error('Заполните все поля')
   }
 }
 </script>
