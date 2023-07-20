@@ -1,9 +1,11 @@
 <template>
-  <AdvantagesItem
-    v-for="item in advantages.data"
-    :key="item.id"
-    :block="item.attributes"
-  />
+  <div id="direction">
+    <AdvantagesItem
+      v-for="item in advantages.data"
+      :key="item.id"
+      :block="item.attributes"
+    />
+  </div>
 </template>
 
 <script setup>

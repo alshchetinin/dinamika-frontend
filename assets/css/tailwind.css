@@ -5,6 +5,21 @@
 :root {
   --swiper-theme-color: #e01f3d !important;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav .router-link-active {
+  @apply relative;  
+}
+
+nav .router-link-active::before {
+  content: '';
+  position: absolute;
+  @apply w-2 h-2 rounded-full bg-primary -bottom-4 left-[calc(50%-0.25rem)];
+}
+
 .swiper-button-disabled {
   opacity: 0.2;
   cursor: auto;

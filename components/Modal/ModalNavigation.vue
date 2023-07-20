@@ -14,7 +14,7 @@
       <nav class="">
         <ul class="grid text-center gap-6">
           <li>
-            <nuxt-link class="hover:opacity-70 transition-all" to="#direction"
+            <nuxt-link class="hover:opacity-70 transition-all" to="/#direction"
               >Направления</nuxt-link
             >
           </li>
