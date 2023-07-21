@@ -1,8 +1,13 @@
 <template>
   <section
-    class="relative min-h-[600px] py-28 bg-cover bg-no-repeat bg-right"
+    class="relative min-h-[600px] py-28 bg-cover bg-no-repeat bg-right overflow-hidden"
     style="background-image: url('/CTA.png')"
   >
+    <div
+      class="absolute bottom-0 transform -rotate-[160deg] scale-75 z-0 opacity-10"
+    >
+      <LogoAnimation />
+    </div>
     <div
       class="absolute inset-0 opacity-10 pointer-events-none z-0 bg-cover bg-no-repeat bg-right"
       style="background-image: url('/CTA.png')"

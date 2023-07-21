@@ -4,6 +4,7 @@
     image="about.jpeg"
     video=""
   />
+
   <SectionAboutCEO />
   <SectionAboutCareer />
   <SectionAboutTeam />

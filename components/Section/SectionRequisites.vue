@@ -5,7 +5,11 @@ const { data: url } = getRequisites()
 
 <template>
   <ui-block>
-    <section class="container">
+    <section class="container relative overflow-hidden">
+      <div class="absolute -left-32 -top-14 transform -rotate-[10deg] scale-75">
+        <LogoAnimation />
+      </div>
+
       <div
         class="grid lg:grid-cols-5 gap-5 bg-button-primary text-white rounded-lg py-20"
       >
