@@ -73,7 +73,7 @@
                   >Соглашение об обработке персональных данных</ui-text
                 >
               </nuxt-link>
-              <nuxt-link to="/about">
+              <nuxt-link :to="requisites" external="true">
                 <ui-text class="text-white opacity-40" as="p"
                   >Реквизиты</ui-text
                 >
@@ -87,6 +87,7 @@
 </template>
 
 <script setup>
-const { getContact } = useData()
+const { getContact, getRequisites } = useData()
 const { data: contact } = await getContact()
+const { data: requisites } = await getRequisites()
 </script>

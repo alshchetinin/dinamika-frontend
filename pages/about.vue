@@ -7,6 +7,7 @@
   <SectionAboutCEO />
   <SectionAboutCareer />
   <SectionAboutTeam />
+  <SectionRequisites />
 </template>
 
 <script setup lang="ts">
