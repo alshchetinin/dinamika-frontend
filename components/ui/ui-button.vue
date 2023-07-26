@@ -11,9 +11,9 @@
     v-if="isLink"
     :to="link"
     :class="classButton"
-    class="leading-none gap-2 text-center rounded-md no-underline transition duration-200 ease-in-out uppercase inline-flex items-center border"
+    class="leading-none overflow-hidden gap-2 text-center rounded-md no-underline transition duration-200 ease-in-out uppercase inline-flex items-center border"
   >
-    <span v-html="text"></span>
+    <span class="relative z-10" v-html="text"></span>
   </NuxtLink>
 </template>
 

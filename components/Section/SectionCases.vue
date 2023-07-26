@@ -4,14 +4,22 @@
       <div class="grid lg:grid-cols-5 gap-x-5 gap-y-10">
         <ui-subtitle> наши кейсы</ui-subtitle>
 
-        <div class="lg:col-span-4">
+        <!-- <div class="lg:col-span-4">
           <ui-title as="h2" size="big">
             Мы гордимся тем, что являемся надежными поставщиками крупных
             компаний
           </ui-title>
-        </div>
+        </div> -->
         <div class="col-span-full">
           <CasesSwiper />
+          <div class="mt-4 flex justify-center items-center">
+            <ui-button
+              size="large"
+              text="Все кейсы"
+              link="/cases"
+              variant="primary"
+            />
+          </div>
         </div>
       </div>
     </ui-block>
