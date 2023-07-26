@@ -32,7 +32,7 @@
             </div>
             <div class="lg:col-span-2">
               <nuxt-img
-                src="anna.jpg"
+                src="https://admin.72d.ru/uploads/Anna_Sergeevna_3515e8202b.jpg"
                 class="w-full h-full object-cover object-top rounded-2xl"
               />
             </div>

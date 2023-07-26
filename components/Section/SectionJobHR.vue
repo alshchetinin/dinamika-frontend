@@ -27,7 +27,7 @@
           </div>
           <div>
             <nuxt-img
-              src="hh.jpg"
+              src="https://admin.72d.ru/uploads/Olya_Prokopeva_afdaa211e3.jpeg"
               class="h-full w-full object-cover object-top"
             />
           </div>
