@@ -4,8 +4,8 @@
     video=""
     image="contact.jpg"
   />
-  <SectionAbout :show-video="false" />
-  <SectionCTA />
+  <!-- <SectionAbout :show-video="false" /> -->
+  <!-- <SectionCTA /> -->
 </template>
 
 <script setup lang="ts">
