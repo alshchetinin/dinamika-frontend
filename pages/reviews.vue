@@ -1,6 +1,6 @@
 <template>
   <SectionHero
-    title="Каждый клиент <br/>наша гордость"
+    title="Каждый клиент — <br/>наша гордость"
     video=""
     image="reviews.jpg"
   />
