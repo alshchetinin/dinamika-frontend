@@ -1,5 +1,5 @@
 <template>
-  <SectionHero />
+  <SectionHero video="" image="/hero.jpg" />
   <SectionAbout />
   <SectionAdvantages />
   <AppForm class="z-30 bg-white relative" />
