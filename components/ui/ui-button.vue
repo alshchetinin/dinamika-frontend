@@ -2,10 +2,10 @@
   <button
     v-if="isButton"
     :class="[classButton, attrs.class]"
-    class="leading-none text-center gap-2 rounded-md transition duration-200 ease-in-out uppercase flex items-center disabled:cursor-not-allowed font-medium disabled:bg-opacity-30"
+    class="leading-none text-center overflow-hidden gap-2 rounded-md transition duration-200 ease-in-out uppercase flex items-center disabled:cursor-not-allowed font-medium disabled:bg-opacity-30"
     @click="emit('click')"
   >
-    <span class="text-center w-full" v-html="text"></span>
+    <span class="text-center w-full relative z-10" v-html="text"></span>
   </button>
   <NuxtLink
     v-if="isLink"
@@ -58,7 +58,7 @@ const styleSize: sizes = {
 
 const styleButton: variants = {
   primary:
-    'bg-primary group hover:bg-button-secondary text-white hover:text-white ' +
+    'button-primary group button-primary text-white hover:text-white ' +
     styleSize[props.size],
   secondary:
     'text-white  bg-button-secondary hover:text-white border-primary hover:border-white ' +
@@ -80,3 +80,28 @@ const classButton = computed(() => {
   return styleButton[props.variant]
 })
 </script>
+
+<style scoped>
+.button-primary {
+  position: relative;
+  background: linear-gradient(135deg, #0b7076 0%, #0b7076 100%);
+  transition: background 1s ease;
+}
+
+.button-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(135deg, #0b7076 0%, #44eded 47.92%, #0b7076 100%);
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 1;
+}
+
+.button-primary:hover::before {
+  opacity: 1;
+}
+</style>
