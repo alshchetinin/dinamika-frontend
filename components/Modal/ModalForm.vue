@@ -28,7 +28,7 @@
             <h3 class="text-lg lg:text-[2.25rem] uppercase mb-2 font-semibold">
               Оставьте заявку
             </h3>
-            <p class="max-w-md">Мы свяжемся с вами в течении 1 часа</p>
+            <p class="max-w-md">Мы свяжемся с вами в течениe 1 часа</p>
           </div>
           <div class="space-y-6">
             <label class="block">
