@@ -9,7 +9,10 @@
         </div>
       </div>
       <div class="grid lg:grid-cols-4 gap-5">
-        <div class="p-2 streng-animation">
+        <div class="p-2 relative">
+          <div
+            class="absolute inset-0 w-full h-[105%] z-10 bg-white streng-animation"
+          ></div>
           <p class="text-[57px] font-medium leading-none mb-3">01</p>
           <ui-title as="h3" size="small" class="mb-5">{{
             strength[0].title
@@ -18,7 +21,10 @@
             <span v-html="strength[0].description"></span>
           </ui-text>
         </div>
-        <div class="streng-animation">
+        <div class="relative">
+          <div
+            class="absolute inset-0 w-full h-[105%] z-10 bg-white streng-animation"
+          ></div>
           <nuxt-img
             :src="strength[0].image.data.attributes.url"
             provider="strapi"
@@ -26,7 +32,10 @@
             class="h-full w-full object-cover rounded-lg"
           />
         </div>
-        <div class="p-2 streng-animation">
+        <div class="p-2 relative">
+          <div
+            class="absolute inset-0 w-full h-[105%] z-10 bg-white streng-animation"
+          ></div>
           <p class="text-[57px] font-medium leading-none mb-3">02</p>
           <ui-title as="h3" size="small" class="mb-5">{{
             strength[1].title
@@ -35,7 +44,10 @@
             <span v-html="strength[1].description"></span>
           </ui-text>
         </div>
-        <div class="streng-animation">
+        <div class="relative">
+          <div
+            class="absolute inset-0 w-full h-[105%] z-10 bg-white streng-animation"
+          ></div>
           <nuxt-img
             :src="strength[1].image.data.attributes.url"
             provider="strapi"
@@ -43,7 +55,10 @@
             class="h-full w-full object-cover rounded-lg"
           />
         </div>
-        <div class="streng-animation">
+        <div class="relative">
+          <div
+            class="absolute inset-0 w-full h-[105%] z-10 bg-white streng-animation"
+          ></div>
           <nuxt-img
             :src="strength[2].image.data.attributes.url"
             provider="strapi"
@@ -51,7 +66,10 @@
             class="h-full w-full object-cover rounded-lg"
           />
         </div>
-        <div class="p-2 streng-animation">
+        <div class="p-2 relative">
+          <div
+            class="absolute inset-0 w-full h-[105%] z-10 bg-white streng-animation"
+          ></div>
           <p class="text-[57px] font-medium leading-none mb-3">03</p>
           <ui-title as="h3" size="small" class="mb-5">{{
             strength[2].title
@@ -60,7 +78,10 @@
             <span v-html="strength[2].description"></span>
           </ui-text>
         </div>
-        <div class="streng-animation">
+        <div class="relative">
+          <div
+            class="absolute inset-0 w-full h-[105%] z-10 bg-white streng-animation"
+          ></div>
           <nuxt-img
             :src="strength[3].image.data.attributes.url"
             provider="strapi"
@@ -68,7 +89,10 @@
             class="h-full w-full object-cover rounded-lg"
           />
         </div>
-        <div class="p-2 streng-animation">
+        <div class="p-2 relative">
+          <div
+            class="absolute inset-0 w-full h-[105%] z-10 bg-white streng-animation"
+          ></div>
           <p class="text-[57px] font-medium leading-none mb-3">04</p>
           <ui-title as="h3" size="small" class="mb-5">{{
             strength[3].title
@@ -96,17 +120,20 @@ onMounted(() => {
       animate(
         anmationArray,
         {
-          opacity: [0, 1],
-          x: ['-100%', 0],
+          scaleX: 0,
+          transformOrigin: 'left center',
+          x: '100%',
         },
         {
-          // easing: spring(),
+          easing: 'linear',
           duration: 1.5,
           delay: stagger(0.05),
         }
       )
     },
-    { margin: '0px 500px 0px 0px' }
+    { margin: '500px 0px 0px 0px' }
   )
 })
 </script>
+
+<style scoped></style>

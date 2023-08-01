@@ -39,12 +39,15 @@ console.log(team.value)
           :breakpoints="{
             640: {
               slidesPerView: 1.5,
+              slidesPerGroup: 1,
             },
             768: {
               slidesPerView: 2.5,
+              slidesPerGroup: 2,
             },
             1024: {
               slidesPerView: 3,
+              slidesPerGroup: 3,
             },
           }"
         >

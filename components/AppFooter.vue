@@ -35,7 +35,7 @@
             </div>
           </div>
         </div>
-        <div class="flex flex-col lg:flex-row gap-7">
+        <div class="flex flex-col lg:flex-row gap-6 lg:gap-32">
           <div>
             <ui-subtitle class="text-white opacity-30 mb-2"
               >О компании</ui-subtitle

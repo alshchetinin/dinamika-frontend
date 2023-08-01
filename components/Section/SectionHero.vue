@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="absolute inset-0">
-      <div class="absolute inset-0 bg-[#000] bg-opacity-70"></div>
+      <div class="absolute inset-0 bg-[#000] bg-opacity-30"></div>
       <video
         v-if="video"
         id="video-background"

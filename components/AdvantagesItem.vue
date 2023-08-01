@@ -28,7 +28,7 @@ const { open, close } = useModal({
 
         <div class="lg:col-span-4 lg:flex">
           <div class="grid lg:grid-cols-2 gap-10">
-            <div class="flex flex-col justify-between h-full">
+            <div class="flex flex-col justify-between h-full pb-24">
               <div>
                 <ui-title as="h2" size="big">
                   <span v-html="block.title"></span>

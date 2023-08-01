@@ -23,13 +23,15 @@ const { data: url } = getRequisites()
               стоимости
             </ui-text>
           </div>
-          <button
+          <a
+            v-if="url"
             class="hover: transition-all transform hover:scale-105 ease-in-out flex flex-col items-center"
-            @click="navigateTo(url, { external: true })"
+            :href="url"
+            target="_blank"
           >
             <TailwindSvgIcon name="save_alt" class="text-[80px] text-white" />
             <ui-text as="p" class="mt-2"> Скачать </ui-text>
-          </button>
+          </a>
         </div>
       </div>
     </section>

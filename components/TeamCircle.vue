@@ -12,17 +12,17 @@
     />
     <CirclePeople
       width="118"
-      class="circle_people top-[15vw] left-[10vw]"
+      class="circle_people top-[24vw] left-[10vw]"
       img="team/3.png"
     />
     <CirclePeople
       width="100"
-      class="circle_people top-[7vw] left-[50vw]"
+      class="circle_people top-[2vw] left-[50vw]"
       img="team/4.png"
     />
     <CirclePeople
       width="160"
-      class="circle_people bottom-[4vw] left-[25vw]"
+      class="circle_people bottom-[4vw] left-[12vw]"
       img="team/8.png"
     />
     <CirclePeople
@@ -32,12 +32,12 @@
     />
     <CirclePeople
       width="108"
-      class="circle_people top-16 right-[19vw]"
+      class="circle_people top-[10vw] right-[19vw]"
       img="team/7.png"
     />
     <CirclePeople
       width="90"
-      class="circle_people top-[15vw] right-[10vw]"
+      class="circle_people top-[25vw] right-[10vw]"
       img="team/5.png"
     />
     <CirclePeople
