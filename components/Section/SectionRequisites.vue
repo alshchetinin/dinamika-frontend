@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { getRequisites } = useData()
-const { data: url } = getRequisites()
+const { data: url, pending } = getRequisites()
 </script>
 
 <template>
@@ -24,7 +24,7 @@ const { data: url } = getRequisites()
             </ui-text>
           </div>
           <a
-            v-if="url"
+            v-if="!pending"
             class="hover: transition-all transform hover:scale-105 ease-in-out flex flex-col items-center"
             :href="url"
             target="_blank"
