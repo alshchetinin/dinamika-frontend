@@ -55,5 +55,5 @@ textarea {
 }
 .thumbs-swiper .swiper-slide-thumb-active {
   opacity: 1;
-  @apply text-primary font-semibold  border-primary;  
+  @apply text-primary font-semibold  border-primary border-b;  
 }

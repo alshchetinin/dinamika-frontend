@@ -3,7 +3,7 @@
     <Swiper
       class="mt-3 thumbs-swiper"
       :modules="[SwiperAutoplay, SwiperNavigation, SwiperFreeMode]"
-      :slides-per-view="5"
+      :slides-per-view="slidesPerView"
       :watch-slides-progress="true"
       :loop="true"
       :navigation="{
@@ -30,7 +30,7 @@
       :thumbs="{ swiper: thumbsSwiper }"
       @swiper="setSwiper"
     >
-      <SwiperSlide v-for="item in cases?.data" :key="item.id" class="p-2">
+      <SwiperSlide v-for="item in cases?.data" :key="item.id" class="mt-2">
         <CaseItem :data="item.attributes" />
       </SwiperSlide>
     </Swiper>
@@ -46,9 +46,17 @@
 
 <script setup lang="ts">
 const { getMainCase } = useData()
-const { data: cases } = await getMainCase()
+const { data: cases, pending } = await getMainCase()
 const mainSwiper = ref(null)
 const thumbsSwiper = ref(null)
+const slidesPerView = computed(() => {
+  if (cases?.value?.data) {
+    if (cases?.value?.data.length >= 1 && cases?.value?.data.length <= 5) {
+      return cases.value?.data.length
+    }
+  }
+  return 5
+})
 const setSwiper = (swiper: any) => {
   mainSwiper.value = swiper
 }

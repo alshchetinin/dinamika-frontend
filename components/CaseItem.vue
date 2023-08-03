@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <article>
-    <div class="grid lg:grid-cols-2 gap-10 p-5 lg:p-10 rounded-xl shadow-md">
+    <div class="grid lg:grid-cols-2 gap-10 p-5 lg:p-10 rounded-xl bg-gray-100">
       <div>
         <ui-title as="h3" size="medium" class="mb-8">
           {{ data?.title }}
