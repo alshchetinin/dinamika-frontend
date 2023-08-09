@@ -1,3 +1,7 @@
+<script setup>
+const { getOnac } = useData()
+const { data: onac, error } = await getOnac()
+</script>
 <template>
   <section class="lg:min-h-screen flex flex-col justify-center relative">
     <div class="absolute inset-0 hidden lg:block">
@@ -8,15 +12,10 @@
         <div></div>
         <div class="lg:col-span-4">
           <ui-title as="h2" size="big">
-            Наша история началась <br />
-            <span class="text-primary">с 2009 года</span>
+            <span v-html="onac.data.attributes.block_history.title"></span>
           </ui-title>
           <ui-text as="p" class="max-w-lg mt-5">
-            Команда Динамики — это инициативные и вовлеченные люди, которые не
-            боятся сложных задач и готовы к реализации масштабных проектов. У
-            нас нет новичков, только квалифицированные специалисты с опытом
-            работы от 4 лет в сфере электротехнической продукции и
-            проектирования
+            {{ onac.data.attributes.block_history.description }}
           </ui-text>
           <nuxt-link
             class="text-xl underline text-primary hover:text-opacity-80 mt-7 block"

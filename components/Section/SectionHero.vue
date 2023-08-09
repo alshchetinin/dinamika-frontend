@@ -8,7 +8,7 @@
       ></h1>
       <div ref="button">
         <ui-button
-          text="Связаться с нами"
+          :text="nameButton"
           size="large"
           variant="primary"
           @click="open"
@@ -29,6 +29,7 @@
       </video>
       <nuxt-img
         v-else
+        provider="strapi"
         :src="image"
         alt="1"
         class="h-full w-full object-cover lg:object-center"
@@ -64,6 +65,10 @@ defineProps({
   withButton: {
     type: Boolean,
     default: true,
+  },
+  nameButton: {
+    type: String,
+    default: 'Связаться с нами',
   },
 })
 const { open, close } = useModal({

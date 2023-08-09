@@ -1,3 +1,20 @@
+<script setup>
+defineProps({
+  title: {
+    type: String,
+    default: '',
+  },
+  descriptionOne: {
+    type: String,
+    default: '',
+  },
+  descriptionTwo: {
+    type: String,
+    default: '',
+  },
+})
+</script>
+
 <template>
   <section class="container">
     <ui-block>
@@ -6,21 +23,14 @@
 
         <div class="lg:col-span-4">
           <ui-title as="h2" size="big">
-            Мы — команда, которой <br />
-            не все равно
+            <span v-html="title"></span>
           </ui-title>
           <div class="grid lg:grid-cols-2 mt-5 lg:mt-10 gap-10">
             <ui-text as="p">
-              Команда Динамики — это инициативные и вовлеченные люди, которые не
-              боятся сложных задач и готовы к реализации масштабных проектов. У
-              нас нет новичков, только квалифицированные специалисты с опытом
-              работы от 4 лет в сфере электротехнической продукции и
-              проектирования. 
+              <span v-html="descriptionOne"></span>
             </ui-text>
             <ui-text as="p">
-              Мы — знаем, что в нашей сфере нет мелочей, поэтому внимательно
-              относимся ко всему, включая документы — бережем все стандарты,
-              сертификаты и паспорта.
+              <span v-html="descriptionTwo"></span>
             </ui-text>
             <div>
               <ui-button

@@ -1,13 +1,15 @@
 <template>
   <SectionHero
-    title="Каждый клиент — <br/>наша гордость"
+    :title="pageReviews?.data.attributes.hero.title"
     video=""
-    image="reviews.jpg"
+    :image="pageReviews?.data.attributes.hero.image.data.attributes.url"
   />
   <SectionAbout :show-video="false" />
   <SectionReviews />
 </template>
 <script setup lang="ts">
+const { getPageReviews } = useData()
+const { data: pageReviews } = await getPageReviews()
 useSeoMeta({
   title: 'Отзывы',
 })

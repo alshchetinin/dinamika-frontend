@@ -106,7 +106,71 @@ export default function useData() {
       }
     )
   }
+  const getSotrudnichestvo = () => {
+    return useAsyncData(
+      'sotrudnichestvo',
+      async () =>
+        await findOne('sotrudnichestvo', {
+          populate: ['deep'],
+        })
+    )
+  }
+  const getOnac = () => {
+    return useAsyncData(
+      'onac',
+      async () =>
+        await findOne('o-na', {
+          populate: ['deep'],
+        })
+    )
+  }
 
+  const getPageHR = () => {
+    return useAsyncData(
+      'hr',
+      async () =>
+        await findOne('stranicza-karera', {
+          populate: ['deep'],
+        })
+    )
+  }
+  const getPageCases = () => {
+    return useAsyncData(
+      'pagecases',
+      async () =>
+        await findOne('straniczu-kejsy', {
+          populate: ['deep'],
+        })
+    )
+  }
+  const getPageReviews = () => {
+    return useAsyncData(
+      'getPageReviews',
+      async () =>
+        await findOne('stranicza-otzyvy', {
+          populate: ['deep'],
+        })
+    )
+  }
+  const getAboutPage = () => {
+    return useAsyncData(
+      'aboutPage',
+      async () =>
+        await findOne('stranicza-o-kompanii', {
+          populate: ['deep'],
+        })
+    )
+  }
+
+  const getMainPage = () => {
+    return useAsyncData(
+      'mainPage',
+      async () =>
+        await findOne('main', {
+          populate: ['deep'],
+        })
+    )
+  }
   return {
     getAdvantage,
     getStrength,
@@ -117,5 +181,12 @@ export default function useData() {
     getMainCase,
     getTeam,
     getRequisites,
+    getSotrudnichestvo,
+    getOnac,
+    getPageHR,
+    getPageCases,
+    getPageReviews,
+    getAboutPage,
+    getMainPage,
   }
 }

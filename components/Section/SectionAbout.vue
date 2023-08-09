@@ -5,6 +5,9 @@ defineProps({
     default: true,
   },
 })
+
+const { getOnac } = useData()
+const { data: onac, error } = await getOnac()
 </script>
 
 <template>
@@ -15,19 +18,18 @@ defineProps({
 
         <div class="lg:col-span-4">
           <ui-title as="h2" size="big">
-            СПЕЦИАЛИЗИРУЕМСЯ НА ОПТИМИЗАЦИИ ЭЛЕКТРОТЕХНИЧЕСКиХ РЕШЕНИЙ
+            {{ onac?.data.attributes.title }}
           </ui-title>
           <div class="grid lg:grid-cols-5 mt-5 lg:mt-10 gap-10">
             <ui-text as="p" class="lg:col-span-3">
-              Проводим технический и финансовый анализ электротехнического
-              проекта и предлагаем рациональный вариант его исполнения
+              {{ onac?.data.attributes.description }}
             </ui-text>
             <div class="lg:col-span-2">
-              <ui-text as="p"> Мы сохранили </ui-text>
+              <ui-text as="p"> {{ onac.data.attributes.fact_text }}</ui-text>
               <p class="text-3xl lg:text-4xl leading-none font-bold">
-                >  1 МЛРД ₽
+                {{ onac.data.attributes.fact_number }}
               </p>
-              <ui-text as="p"> для наших заказчиков </ui-text>
+              <ui-text as="p"> {{ onac.data.attributes.fact_text_2 }} </ui-text>
             </div>
           </div>
         </div>

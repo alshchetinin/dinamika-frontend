@@ -1,3 +1,16 @@
+<script setup>
+defineProps({
+  text: {
+    type: String,
+    default: '',
+  },
+  photo: {
+    type: String,
+    default: '',
+  },
+})
+</script>
+
 <template>
   <section class="container">
     <ui-block>
@@ -7,23 +20,7 @@
         <div class="lg:col-span-4 p-10 bg-gray-100 rounded-2xl">
           <div class="grid lg:grid-cols-5 gap-10">
             <div class="lg:col-span-3">
-              <ui-text as="p">
-                «За 15 лет я собрала лучший опыт в крупных компаниях региона.
-                Благодаря этому знаю о подводных камнях отрасли — к каким
-                убыткам приводят нецелесообразные решения и неоправданно дорогая
-                продукция.
-                <br /><br />
-                Поэтому двигатель Динамики — желание находить оптимальные
-                решения на основе наших знаний. Мы выросли из торговой компании
-                в сервисную и берем на себя реализацию проекта комплексно. Хотим
-                расти и развиваться вместе с рынком, помогая всем участникам
-                сферы разбираться со сложными задачами.
-                <br /><br />
-                <b>Моя личная миссия </b>— открытая и прозрачная коммуникация
-                между игроками рынка, без бюрократии. Только общаясь напрямую
-                можно сэкономить время реализации и стоимости проекта,
-                эффективно распределять и сокращать технические ресурсы»
-              </ui-text>
+              <MarkdownRender :md="text" class="prose prose-a:no-underline" />
               <ui-text as="p" class="text-primary mt-10">
                 Основатель компании «Динамика»
                 <br />
@@ -32,7 +29,8 @@
             </div>
             <div class="lg:col-span-2">
               <nuxt-img
-                src="https://admin.72d.ru/uploads/Anna_Sergeevna_3515e8202b.jpg"
+                provider="strapi"
+                :src="photo.data.attributes.url"
                 class="w-full h-full object-cover object-top rounded-2xl"
               />
             </div>

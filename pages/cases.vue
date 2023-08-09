@@ -1,11 +1,12 @@
 <template>
   <SectionHero
-    title="Мы гордимся тем, что являемся надежными поставщиками крупных компаний"
+    :title="pageCases?.data.attributes.hero.title"
     video=""
-    image="cases.jpg"
+    :image="pageCases?.data.attributes.hero.image.data.attributes.url"
+    :name-button="pageCases?.data.attributes.hero.button.name"
   />
   <SectionAbout :show-video="false" />
-  <div class="container">
+  <div class="container" v>
     <ui-block>
       <div class="grid gap-10">
         <CaseItem
@@ -19,9 +20,11 @@
   <SectionCTA />
 </template>
 
-<script setup lang="ts">
-const { getCases } = useData()
-const { data: cases } = await getCases()
+<script setup>
+const { getCases, getPageCases } = useData()
+const { data: pageCases } = await getPageCases()
+const { data: cases, error, pending } = await getCases()
+
 useSeoMeta({
   title: 'Наши кейсы',
   description:

@@ -1,5 +1,6 @@
 <template>
   <section
+    v-if="!error"
     class="relative min-h-[600px] py-28 bg-cover bg-no-repeat bg-right overflow-hidden"
     style="background-image: url('/CTA.png')"
   >
@@ -35,12 +36,10 @@
 
           <div class="lg:col-span-2 -mt-2">
             <ui-title as="h2" size="small">
-              Мы являемся членами Нефтегазового кластера Тюменской области
+              {{ sotrudnichestvo?.data.attributes.title }}
             </ui-title>
             <ui-text as="p" class="text-white mt-8 max-w-sm">
-              — площадки для обмена опытом, поиска и реализации передовых
-              решений в ТЭК. Поэтому мы всегда в повестке и знаем о вопросах
-              сферы, которые стоят наиболее остро.
+              {{ sotrudnichestvo?.data.attributes.description }}
             </ui-text>
           </div>
           <div class="lg:col-span-2 place-items-end">
@@ -52,4 +51,7 @@
   </section>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const { getSotrudnichestvo } = useData()
+const { data: sotrudnichestvo, error } = await getSotrudnichestvo()
+</script>

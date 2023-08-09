@@ -1,3 +1,20 @@
+<script setup>
+defineProps({
+  title: {
+    type: String,
+    default: '',
+  },
+  description: {
+    type: String,
+    default: '',
+  },
+  photo: {
+    type: String,
+    default: '',
+  },
+})
+</script>
+
 <template>
   <section class="container">
     <ui-block>
@@ -7,18 +24,12 @@
         <div class="lg:col-span-4 grid lg:grid-cols-2 gap-10">
           <div>
             <ui-title as="h2" size="big" class="mb-7 lg:mb-11">
-              Мы — команда, инициативных и вовлеченных людей
+              <span v-html="title"></span>
             </ui-title>
-            <ui-text as="p">
-              Команда, объединившая ведущих производителей
-              кабельно-проводниковой, кабеленесущих систем и эстакад для
-              реализации сложных электротехнических проектов в нефтегазовой
-              сфере
-
-              <br /><br />
-              Проводим технический и финансовый анализ электротехнического
-              проекта и предлагаем оптимальный вариант его исполнения.
-            </ui-text>
+            <MarkdownRender
+              :md="description"
+              class="prose prose-a:no-underline"
+            />
             <nuxt-link
               class="text-xl underline text-primary hover:text-opacity-80 mt-7 lg:mt-11 block"
               to="/about"
@@ -28,7 +39,8 @@
           </div>
           <div>
             <nuxt-img
-              src="https://admin.72d.ru/uploads/Olya_Prokopeva_afdaa211e3.jpeg"
+              provider="strapi"
+              :src="photo.data.attributes.url"
               class="h-full w-full object-cover object-top"
             />
           </div>
