@@ -17,12 +17,13 @@ const { data: onac, error } = await getOnac()
           <ui-text as="p" class="max-w-lg mt-5">
             {{ onac.data.attributes.block_history.description }}
           </ui-text>
-          <nuxt-link
-            class="text-xl underline text-primary hover:text-opacity-80 mt-7 block"
-            to="/about"
-          >
-            Подробнее о компании
-          </nuxt-link>
+          <ui-button
+            size="medium"
+            variant="primary"
+            text="Подробнее о компании"
+            class="mt-5"
+            @click="navigateTo('/about')"
+          />
         </div>
       </div>
     </ui-block>

@@ -90,20 +90,12 @@ export default function useData() {
   }
 
   const getRequisites = () => {
-    const config = useRuntimeConfig()
     return useAsyncData(
       'requisite',
       async () =>
         await findOne('requisite', {
           populate: ['deep'],
-        }),
-      {
-        transform: (data) => {
-          return (
-            config.strapi.url + data.data.attributes?.pdf.data.attributes.url
-          )
-        },
-      }
+        })
     )
   }
   const getSotrudnichestvo = () => {

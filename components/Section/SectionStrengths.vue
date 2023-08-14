@@ -114,25 +114,21 @@ const { data: strength } = await getStrength()
 
 onMounted(() => {
   const anmationArray = document.querySelectorAll('.streng-animation')
-  inView(
-    '.container-streng-animation',
-    (info) => {
-      animate(
-        anmationArray,
-        {
-          scaleX: 0,
-          transformOrigin: 'left center',
-          x: '100%',
-        },
-        {
-          easing: 'linear',
-          duration: 1.5,
-          delay: stagger(0.05),
-        }
-      )
-    },
-    { margin: '500px 0px 0px 0px' }
-  )
+  inView('.container-streng-animation', (info) => {
+    animate(
+      anmationArray,
+      {
+        scaleX: 0,
+        transformOrigin: 'left center',
+        x: '100%',
+      },
+      {
+        easing: 'linear',
+        duration: 1.5,
+        delay: 0.7,
+      }
+    )
+  })
 })
 </script>
 

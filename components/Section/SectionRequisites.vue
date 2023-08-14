@@ -1,6 +1,16 @@
 <script setup lang="ts">
+const config = useRuntimeConfig()
 const { getRequisites } = useData()
-const { data: url, pending } = getRequisites()
+
+const url = ref('')
+onMounted(async () => {
+  const { data, pending, refresh } = await getRequisites()
+
+  url.value =
+    'https://admin.72d.ru' +
+    data.value?.data.attributes?.pdf.data.attributes.url
+  console.log(url.value)
+})
 </script>
 
 <template>
