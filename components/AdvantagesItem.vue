@@ -24,7 +24,7 @@ const { open, close } = useModal({
   >
     <ui-block class="h-full">
       <div class="grid lg:grid-cols-5 gap-5 container h-full">
-        <ui-subtitle> о нас</ui-subtitle>
+        <ui-subtitle> направления работы</ui-subtitle>
 
         <div class="lg:col-span-4 lg:flex">
           <div class="grid lg:grid-cols-2 gap-10">
